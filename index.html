@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><!---- font-family: "Poppins", sans-serif; -->
+    <link rel="stylesheet" href="style.css"><!--css-->
+    <link rel="stylesheet" href="declaration.css"><!--declarations-->
+    <script src="https://kit.fontawesome.com/5ee38f2693.js" crossorigin="anonymous"></script><!--- awsome font-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"><!-- iconscout line-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css"><!-- iconscout solid-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/thinline.css"><!-- iconscout thinline-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!--- typed java --> 
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav_logo">jHon</a>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list grid">
+                    <li class="nav_item">
+                        <a href="#home" class="nav_link">
+                            <i class="uil uil-estate nav_icon"></i>Home
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#about" class="nav_link">
+                            <i class="uil uil-user nav_icon"></i>About
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#skills" class="nav_link">
+                            <i class="uil uil-file-info-alt nav_icon"></i>Skills
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#services" class="nav_link">
+                            <i class="uil uil-bag nav_icon"></i>Services
+                        </a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="#portfolio" class="nav_link">
+                            <i class="uil uil-scenery nav_icon"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#contact" class="nav_link">
+                            <i class="uil uil-message nav_icon"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <i class="fa-solid fa-xmark nav_close" id="nav-close"></i>
+            </div>
+
+            <div class="nav_btns">
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <script>
+
+        const navMenu = document.getElementById('nav-menu'),
+              navToggle = document.getElementById('nav-toggle'),
+              navClose = document.getElementById('nav-close')
+
+        
+        if(navToggle){
+            navToggle.addEventListener('click', ()=>{
+                navMenu.classList.add('show-menu')
+            })
+        }
+
+        if(navClose){
+            navClose.addEventListener('click', () =>{
+                navMenu.classList.remove('show-menu')
+            })
+        }
+
+
+
+        const navLink = document.querySelectorAll('.nav_link')
+
+        function linkAction(){
+            const navMenu = document.getElementById('nav-menu')
+            navMenu.classList.remove('show-menu')
+        }
+        navLink.forEach(n => n.addEventListener('click', linkAction))
+
+    </script>
+</body>
+</html>
