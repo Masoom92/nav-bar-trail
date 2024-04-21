@@ -225,6 +225,8 @@ img{
     display: grid;
     grid-template-columns: max-content;
     row-gap: 1rem;
+    bottom: -150%;
+    position: relative;
 }
 .home_social-icon{
     font-size: 1.25rem;
